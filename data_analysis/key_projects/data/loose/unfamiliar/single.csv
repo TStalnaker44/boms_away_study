@@ -1,0 +1,10 @@
+ResponseID,S1,S2,S3,FS2,FS3,FS6,FS9,P1,P6,IP1,C3,C4,FN2,O1,O2,Q1,Q2,Q3,Q6,Q8,Q9,Q10
+R_3KVnzvfW2dIXz1t,,,"Yes, my projects are required to publish their dependencies",,,,,,,,,,,No,,20,Consultant,Some college,Open source only,No,"Yes, informal",Quarterly
+R_2Y5Qf0TkbmDkYZF,,,"Yes, my projects voluntarily publish their dependencies",,,,,,,,,,,No,,12,Programmer,High School,Both open source and closed source,"Yes, formal","Yes, informal",Quarterly
+R_vH7zv42GvE1uQQV,,,"No, my projects do not publish their dependencies",,,,,,,,,,,No,,24,Educator,Doctoral Degree,Both open source and closed source,"Yes, formal","Yes, formal",Never
+R_3rHTLEIdiO8tJwt,,,"Yes, my projects voluntarily publish their dependencies",,,,,,,,,,,No,,27,Programmer,Doctoral Degree,Open source only,No,No,More frequently
+R_1E1gn4jpW8DYZCN,,,"Yes, my projects are required to publish their dependencies",,,,,,,,,,,No,,10,Programmer,High School,Both open source and closed source,"Yes, informal","Yes, informal",Quarterly
+R_ahFliHRHKOE9L3j,,,"Yes, my projects voluntarily publish their dependencies",,,,,,,,,,,No,,30,Programmer,Master's Degree,Both open source and closed source,"Yes, informal","Yes, informal",Quarterly
+R_4TKAF9mkGKzXltf,,,"Yes, my projects are required to publish their dependencies",,,,,,,,,,,No,,9,DevOps Engineer,Doctoral Degree,Open source only,No,No,Never
+R_3Op6E626ybw8q5o,,,"Yes, my projects voluntarily publish their dependencies",,,,,,,,,,,No,,38,Project Lead,Master's Degree,Both open source and closed source,"Yes, informal","Yes, informal",Annually
+R_XRJoz2jwg9leN8d,,,"Yes, my projects voluntarily publish their dependencies",,,,,,,,,,,No,,15,IT Manager,Bachelor's Degree,Both open source and closed source,No,No,Monthly

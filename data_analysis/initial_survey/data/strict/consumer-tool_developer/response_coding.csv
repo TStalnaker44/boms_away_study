@@ -1,0 +1,2 @@
+In JSON,Response ID,S1,S3,S5,S6,S8,S10,P4,P8,P9,C3,C7,Sm3,Sc8,Sc9
+15,R_2uq9Acrc4ykecue,"['DependencyTracker', 'Versioning', 'Security']","['Dependencies', 'URL', 'Version', 'CreationTime', 'Vulnerabilities']",,,['HigherSbomQuality'],['InRepository'],,,,"['DependencyTracking', 'ProvidesConsistency']",['MissingToolFeatures'],,['ToolAssisted'],['PackageManager']

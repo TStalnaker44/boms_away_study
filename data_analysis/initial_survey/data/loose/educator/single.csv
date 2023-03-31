@@ -1,0 +1,15 @@
+ResponseID,S4,S7,P7,C4,C5,T5,E2,E3,SC1,SC2,SC3,SC4,SC5,SC6,Q1,Q2,Q3,Q6,Q8,Q9,Q10
+R_1P776djwnwYYHqv,Disagree,Strongly disagree,,Every day,Yes,,Agree,Agree,Agree,Yes,Disagree,Strongly disagree,No,,23,IT Manager,Master's Degree,Both open source and closed source,"Yes, informal","Yes, informal",More frequently
+R_3kcX5GVjOS0Bqsc,Strongly agree,Neutral,Yes,Every day,Yes,Agree,Neutral,Neutral,Strongly agree,Yes,Agree,Disagree,Yes,Yes,40,Consultant,Bachelor's Degree,Both open source and closed source,"Yes, informal","Yes, informal",Quarterly
+R_9mlyPsE52APF3RT,Strongly agree,Strongly agree,,,,,Strongly agree,Neutral,Strongly agree,Yes,Strongly agree,Disagree,No,,,Programmer,Doctoral Degree,,"Yes, formal","Yes, formal",
+R_1CqN5FujZLDvcKR,Neutral,Disagree,Yes,Depends on release cycle,Yes,Disagree,Neutral,Neutral,,Yes,Neutral,Disagree,Yes,Yes,40,Consultant,Master's Degree,Both open source and closed source,"Yes, formal","Yes, informal",Quarterly
+R_2X02uH9Mm87FxHp,Strongly disagree,Strongly agree,Yes,Every day,Yes,Strongly agree,Strongly agree,Agree,Strongly agree,Yes,Agree,Strongly agree,Yes,Yes,40,Project Lead,Some college,Closed source only,"Yes, formal","Yes, informal",Quarterly
+R_1diviwEB1kpQfiN,Strongly agree,Agree,Yes,on each commit and build,Yes,Disagree,Disagree,Disagree,Strongly agree,Yes,Agree,Neutral,Yes,Yes,25,Project Lead,Master's Degree,Both open source and closed source,"Yes, informal","Yes, informal",Monthly
+R_2s5ZlVioDWKw8nl,Neutral,Neutral,,,,,Neutral,Neutral,Agree,No,,,,,,Tester,Bachelor's Degree,,"Yes, formal","Yes, formal",
+R_1pXOYrzicaKEh9a,Strongly agree,Disagree,Yes,Every day,Yes,Disagree,Agree,Disagree,Strongly agree,Yes,Neutral,Agree,No,,20,CTO,Bachelor's Degree,Both open source and closed source,"Yes, formal","Yes, formal",More frequently
+R_11db8BgtVC2jgQK,Strongly agree,Agree,I don't know,,,,Agree,Agree,Strongly agree,Yes,Disagree,Disagree,Yes,Yes,18,Programmer,Bachelor's Degree,Closed source only,"Yes, informal","Yes, informal",Monthly
+R_2yl8CXmByyorHTE,Strongly agree,Agree,Yes,Every day,Yes,Neutral,Neutral,Agree,Strongly agree,Yes,Agree,Neutral,Yes,Yes,30,Programmer,Doctoral Degree,Both open source and closed source,"Yes, informal","Yes, informal",More frequently
+R_2QrYYG4zX8M9X45,Agree,Neutral,,,,,Neutral,Agree,Disagree,No,,,,,,Programmer,Bachelor's Degree,,"Yes, formal","Yes, formal",
+R_3fwNV4JCR7gYKCq,Strongly agree,Strongly agree,No,Once per month,Yes,,Strongly agree,Strongly agree,Strongly agree,Yes,Disagree,Disagree,Yes,No,3,DevOps Engineer,Bachelor's Degree,Both open source and closed source,"Yes, formal","Yes, formal",Never
+R_eG8r0YjTDRCybL3,Strongly agree,Neutral,Yes,Every day,Yes,Neutral,Neutral,Neutral,Strongly agree,Yes,Agree,Disagree,Yes,Yes,35,Consultant,Bachelor's Degree,Both open source and closed source,"Yes, informal","Yes, informal",More frequently
+R_3MtHobBp4TUfCnf,Agree,Disagree,Yes,Every day,Yes,Strongly disagree,Strongly disagree,Strongly disagree,Strongly agree,Yes,Agree,Agree,Yes,Yes,25,Security Researcher,Doctoral Degree,Open source only,"Yes, formal","Yes, informal",Annually
