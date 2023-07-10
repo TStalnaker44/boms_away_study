@@ -140,35 +140,7 @@ The tables shown here can also be found as PDFs in the `related work` folder.
 ![solutions](solutions_table.PNG)
                                                                                                                                                 
 # Challenge Dependenies
-
-| Contributing Challenge                             | Dependent Challenges                               | Brief justification                                                                                             |
-|----------------------------------------------------|----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| (C1) Complexity of SBOM specifications             | (C5) Insufficient SBOM tooling                     | It is difficult to create tools because of the comlexity of the specifications                                  |
-|                                                    | (C12) Unclear SBOM direction                       | Complex, hard to understand specs lead to lower adoption and more stakeholder confusion                         |
-| (C2) Determining data fields to include in SBOMs   | (C1) Complexity of SBOM specifications             | Increasing the number of fields may improve SBOM quality, but will increase the complexity of the spec          |
-|                                                    | (C5) Insufficient SBOM tooling                     | Tools need to know which fields they should support                                                             |
-| (C3) Incompatibility between SBOM standards        | (C1) Complexity of SBOM specifications             | Incompatibilities between tools and standards excacerbate the complexity of individual specifications           |
-|                                                    | (C5) Insufficient SBOM tooling                     | Incompatibilities between standards pose a challenge to tool creation                                           |
-|                                                    | (C12) Unclear SBOM direction                       | Incompatibilities between tools and standards contributes to lower adoption and more stakeholder confusion      |
-|                                                    | (C13) Generating global software IDs               | Different standards have different ways of generating or representing global IDs                                |
-| (C4)  Keeping SBOMs up to date                     | (C6) Inaccurate and incomplete SBOM                | If an SBOM is not up to date, then the information that it contains in inaccurate                               |
-|                                                    | (C14) Managing SBOM versions                       | As the software is updated or changes are made to correct the SBOM, those SBOM versions also require management |
-| (C5) Insufficient SBOM tooling                     | (C4) Keeping SBOMs up to date                      | Because sufficient tooling for dynamic or runtime BOMs does not exist, it is difficult to keep BOM up to date   |
-|                                                    | (C6) Inaccurate and incomplete SBOM                | Poor tooling produces BOMs of poor quality                                                                      |
-|                                                    | (C8) Differences across ecosystems and communities | Differing levels of tooling support can exacerbate differences across ecosystems                                |
-| (C6) Inaccurate and incomplete SBOM                | (C5) Insufficient SBOM tooling                     | Consumption tools suffer when the BOMs they consume are inaccurate or incomplete                                |
-|                                                    | (C7) Verifying SBOM accuracy and completeness      | If BOMs can be inaccurate or incomplete, it becomes necessary to validate the correctness of BOMs               |
-| (C7) Verifying SBOM accuracy and completeness      | -                                                  | -                                                                                                               |
-| (C8) Differences across ecosystems and communities | (C5) Insufficient SBOM tooling                     | Some ecosystems provide better resources for tools such as manifest files or package managers                   |
-|                                                    | (C11) Inability to locate dependencies for SBOMs   | It is harder to locate dependencies in some language ecosystems                                                 |
-| (C9) SBOM completeness and data privacy trade-off  | (C2) Determining data fields to include in SBOMs   | When deciding fields to include, privacy concerns must be considered                                            |
-|                                                    | (C6) Inaccurate and incomplete SBOM                | BOMs may be incomplete as a result of protecting private or proprietary information                             |
-| (C10) SBOMs for legacy packages and repositories   | (C6) Inaccurate and incomplete SBOM                | Projects that rely on legacy software without BOM are likely to have inaccurate or incomplete BOM               |
-| (C11) Inability to locate dependencies for SBOMs   | (C6) Inaccurate and incomplete SBOM                | The inability to locate a project dependency results in an incomplete BOM                                       |
-| (C12) Unclear SBOM direction                       | -                                                  | -                                                                                                               |
-| (C13) Generating global software IDs               | (C11) Inability to locate dependencies for SBOMs   | One reason developers may be unable to find a software dependency is an ambiguous identifier                    |
-| (C14) Managing SBOM versions                       | -                                                  | -                                                                                                               |
-
+![dependencies](dependencies.PNG)
 
 # Additional Section Drafts
 
