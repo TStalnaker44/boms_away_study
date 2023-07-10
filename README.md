@@ -119,12 +119,7 @@ The tables shown here can also be found as PDFs in the `related work` folder.
 
 ## SBOM study methodology and scope
 
-| Study          | Research methods                      | Considered BOMs                  | Study participants                                                                                                                                     |
-|----------------|---------------------------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Boms Away      | Five surveys and follow-up interviews | SBOMs, HBOMs, AIBOMs, & DataBOMs | SBOM Producers, Consumers, Tool Makers, Standard Makers, and Educators; Developers of Critical OSS projects; AI/ML, CPS, & legal developers/researchers |
-| Xia et al.'s   | Interviews used to derive one survey  | SBOMs & AIBOMs                   | Developers                                                                                                                                             |
-| Zahan et al.'s | Grey literature review                | SBOMs                            | -                                                                                                                                                      |
-| Linux Found.   | One Survey                            | SBOMs                            | Software organizations                                                                                                                                 |
+![scope comparison](scope_comparison.PNG) 
 
 ## SBOM issues/findings coverage by study
 
@@ -139,51 +134,8 @@ The tables shown here can also be found as PDFs in the `related work` folder.
 
 ## Comparison  of challenges across papers
 
-| ID  | Challenge from our study                      | Issue / Concept                                       | Boms Away | Xia et al.'s        | Zahan et al.'s | Linux Found.    |
-|-----|-----------------------------------------------|-------------------------------------------------------|-----------|---------------------|----------------|-----------------|
-| C1  | Complexity of SBOM Specifications             | Complexity of Specifications                          | X         | X (RQ3-1)           |                |                 |
-|     |                                               | Lack of educational resources                         | X         | X (RQ3-3)           | X (4)          | X (Fig 27)      |
-|     |                                               | Not extensible, missing use-cases                     | X         | X (RQ3-1)           | X (1)          |                 |
-| C2  | Determining data fields to include in SBOM    | Determining data fields to include in SBOM            | X         | X (RQ1-4)           |                | X (Fig 23 / 26) |
-| C3  | Incompatibility between SBOM standards        | Competing standards                                   | X         | X (RQ3-1)           | X (2)          |                 |
-|     |                                               | Inconsistency in tooling output                       | X         | X (RQ2-3)           | X (2)          |                 |
-|     |                                               | Multiple representations within standard              | X         |                     |                |                 |
-| C4  | Keeping SBOMs up to date                      | Managing SBOM changes over time (SBOM drift)          | X         |                     |                |                 |
-|     |                                               | Upkeep requirements                                   | X         | X (RQ1-3)           | X (1)          |                 |
-|     |                                               | Dynamic / runtime BOM                                 | X         | X (Implications-1)  | X (1)          |                 |
-| C5  | Insufficient SBOM tooling                     | General tool insufficiency                            | X         |                     | X (1)          | X (Fig 23 / 26) |
-|     |                                               | Lack of support of multi-language projects            | X         |                     |                |                 |
-|     |                                               | Lack of AI / ML tools                                 | X         | X (RQ1-8)           |                |                 |
-|     |                                               | Lack of CPS tools                                     | X         |                     |                |                 |
-|     |                                               | Poor usability of tools                               |           | X (RQ2-3)           |                |                 |
-|     |                                               | Lack of consumption-scenario-driven design            |           | X (Finding 1)       |                |                 |
-|     |                                               | Tools not enterprise ready                            | X         | X (RQ2-3)           |                |                 |
-| C6  | Inaccurate and incomplete SBOMs               | Poor quality SBOM                                     | X         | X (RQ1-1)           | X (1)          |                 |
-|     |                                               | Reporting transitive dependencies                     | X         |                     | X (4)          | X (SBOM Needs)  |
-|     |                                               | Exploitability vs vulnerability                       | X         | X (RQ1-7)           | X (3)          |                 |
-| C7  | Verifying SBOM accuracy and completeness      | Verifying SBOM accuracy and completeness              | X         | X (RQ1-6)           |                |                 |
-|     |                                               | Liability for incorrect SBOM                          | X         |                     | X(5)           | X (Fig 23)      |
-|     |                                               | SBOM integrity checking                               | X         | X (RQ1-6)           |                |                 |
-| C8  | Differences across ecosystems and communities | Supporting languages without package managers         | X         |                     |                |                 |
-|     |                                               | Lack of and varying language support                  | X         |                     |                |                 |
-|     |                                               | Need for language specific tooling                    | X         |                     |                |                 |
-| C9  | SBOM completeness and data privacy trade-off  | Protecting PII, proprietary information, etc in AIBOM | X         |                     |                |                 |
-|     |                                               | Security and trade secrets                            | 4.1.2     | X (RQ1-5) / (RQ3-2) | X (5)          | X (Fig 23)      |
-| C10 | SBOMs for legacy packages and repositories    | Making SBOM for legacy systems                        | X         |                     | X (3)          |                 |
-|     |                                               | Retro-active SBOM creation for past versions          | X         |                     |                |                 |
-| C11 | Inability to locate dependencies for SBOM     | Locating dependencies removed from origin             | X         |                     |                |                 |
-| C12 | Unclear SBOM direction                        | Unclear SBOM direction                                | X         |                     |                | X (Fig 23 / 26) |
-|     |                                               | Fear of minimal compliance document                   | X         |                     |                |                 |
-|     |                                               | Lack of adoption                                      | 4.1.1     | X (RQ1-1)           |                |                 |
-|     |                                               | Lack of incentives to generate SBOM                   | X         | X (Finding 2)       | X (4)          |                 |
-|     |                                               | Uncertain value (work could outweigh benefits)        | X         | X (RQ1-1)           | X (3)          | X (Fig 23 / 26) |
-|     |                                               | SBOM generation is ahead of consumption               | X         | X (RQ2-2)           |                |                 |
-|     |                                               | Effort intensive and time consuming SBOM generation   | X         |                     | X (4)          |                 |
-| C13 | Generating global software IDs                | Lack of widely accepted unique package identifier     | O         |                     | X (2)          |                 |
-|     |                                               | Issues generating proper IDs                          | O         |                     |                |                 |
-| C14 | Versioning SBOMs                              | Need for SBOM version control                         | O         | X (RQ1-3)           |                |                 |
-| C15 | SBOM Distribution                             | Distribution                                          | 4.1.3     | X (RQ1-5)           | X (2)          |                 |
-  
+![related works](related_works.PNG)
+
 # How Solutions Address Challenges
 ![solutions](solutions_table.PNG)
                                                                                                                                                 
