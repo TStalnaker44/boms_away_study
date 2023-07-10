@@ -137,7 +137,7 @@ The tables shown here can also be found as PDFs in the `related work` folder.
 ![related works](related_works.PNG)
 
 # How Solutions Address Challenges
-![solutions](solutions_table.PNG)
+![solutions](solutions_table_full.PNG)
                                                                                                                                                 
 # Challenge Dependenies
 ![dependencies](dependencies.PNG)
