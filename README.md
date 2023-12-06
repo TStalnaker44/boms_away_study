@@ -2,6 +2,16 @@
 
 All data in this repository has been sanitized and anonymized in accordance with our research protocol.
 
+Link to preprint: https://arxiv.org/pdf/2309.12206.pdf
+
+## Purpose
+The contents of this repository serve two purposes.  First, the included data and tools can facilitate the replication and verification of our results.  That is that this repository aims to improve the transparency of our methods.  Second, the included scripts and tools can be adapted by other research teams to be used in their own projects.
+
+### Relevant Badges
+- **Available**: We have included our anonymized and sanitized data as well as the entire suite of tools used during analysis.
+
+- **Reusable**: One of the goals of this repository was to create a suite of tools that could be reused and repurposed for similar projects.
+
 ## Installation
 In order to run the data cleaning and analysis tools, the following libraries will need to be installed.
 
