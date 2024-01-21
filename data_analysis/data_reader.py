@@ -108,25 +108,31 @@ def printResponse(data, survey, question, user, valid_pids, valid_questions):
 def main():
 
     print()
-    print("Welcome to the SBOM Data Viewer!")
-    print("Enter a survey, a question ID, and a participant ID to begin.")
-    print("After your first response has been displayed, type 'help' for more information.")
+    print("Welcome to the Survey Data Viewer!")
+    print("Type 'help' for more information and a full list of commands")
     print()
 
-    data, survey, question, user, valid_pids, valid_questions = selectSurvey()
+    #data, survey, question, user, valid_pids, valid_questions = selectSurvey()
+    #printResponse(data, survey, question, user, valid_pids, valid_questions)
+    #index = getNextValidIndex(valid_pids, user)
 
-    printResponse(data, survey, question, user, valid_pids, valid_questions)
+    survey = None
 
-    index = getNextValidIndex(valid_pids, user)
     while True:
-        user = valid_pids[index]
+
+        if survey != None:
+            user = valid_pids[index]
+
         selection = input(">>> ")
         
         if selection == "":
-            if index < 0:
-                print("There are no more valid responses.")
+            if survey == None:
+                pass
             else:
-                index = printResponse(data, survey, question, user, valid_pids, valid_questions)
+                if index < 0:
+                    print("There are no more valid responses.")
+                else:
+                    index = printResponse(data, survey, question, user, valid_pids, valid_questions)
 
         elif selection.lower().replace("_", " ") in surveys:
             survey = selection.lower().replace("_", " ")
