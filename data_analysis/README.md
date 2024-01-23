@@ -13,12 +13,12 @@ To start analyzing your first survey, you will need to create the `surveys` dire
 
 The `run_all.py` file is the main hub for processing and analysis.  Once everything has been configured, the pipeline should work seemlessly (from Qualtics data conversion all the way through to plotting figures).
 
-Specific functionality can be toggled on and off by adjusting the `config.py` file.  This file will also allow you to select one or more surveys to work with.  Further explanation of the adjustable parameters is available within the `config.py` file.
+Specific functionality can be toggled on and off by adjusting the `settings.py` file.  This file will also allow you to select one or more surveys to work with.  Further explanation of the adjustable parameters is available within the `settings.py` file.
 
 ### Adding a New Survey
 Note: If this is your first time using the tool, you will also need to create the `surveys` directory.  Put this at the top-level.
 
-Adding a new survey for analysis is as simple as adding a few files.  First create a new folder in the `surveys` directory.  This is where you will store all of your survey related files.  You can name the folder however you like, but it is advised to avoid spaces.  You will use this folder name to identify your survey in the `config.py` file.
+Adding a new survey for analysis is as simple as adding a few files.  First create a new folder in the `surveys` directory.  This is where you will store all of your survey related files.  You can name the folder however you like, but it is advised to avoid spaces.  You will use this folder name to identify your survey in the `settings.py` file. The directory names of all surveys to be analyzed should be included in the `SURVEYS` list.
 
 Now that you have your main survey folder, it's time to add some files. First, add a `files` folder to your survey directory.
 
@@ -27,13 +27,13 @@ You will need to manually download and place the Qualtrics data export of the re
 
 You can store multiple files in this format. The scripts are smart enough to use the date information to determine the most recent file and use it for processing.
 
-When the provided CSV file is converted into a more readable JSON, the tool also automatically filters out partial or incomplete survey responses.  You should notice two new files generated in the `files` directory: `completers_MM_DD_YY.json` and `sanitized_MM_DD_YY.json`.  `completers` contains all the information from the CSV export, including PII and contact information.  `sanitized` on the other hand has all content marked as PII removed as well as removing all responses identified as invalid (see `invalid.txt`).  These files are safe to upload to public repositories or replication packages.  By default, this repository's `.gitignore` is set to filter out both the `data` and `completer` type files.  They can be safely stored locally without fear of accidentally pushing them to remote.
+When the provided CSV file is converted into a more-readable JSON, the tool also automatically filters out partial or incomplete survey responses.  You should notice two new files generated in the `files` directory: `completers_MM_DD_YY.json` and `sanitized_MM_DD_YY.json`.  `completers` contains all the information from the CSV export, including PII and contact information.  `sanitized` on the other hand has all content marked as PII removed as well as removing all responses identified as invalid (see `invalid.txt`).  These files are safe to upload to public repositories or replication packages.  By default, this repository's `.gitignore` is set to filter out both the `data` and `completer` type files.  They can be safely stored locally without fear of accidentally pushing them to remote.
 
 ### Required files
 The survey infrastructure package is designed to work out of the box as much as possible, but does require some manual set-up.  A few files are required before the program can run successfully.  We now explore each required file.
 
 #### questions.json 
-Should be placed at the top-level of your survey folder.  This file is used to specify the survey sections, question ids, question text, question types, and other relevant information.  The structure you provide will also inform how your data JSON files will be created. Within the Qualtrics system, navigate to the "Survey" tab of your survey and click on `"Tools" > "Import/Export" > "Export Survey"` to download a `*.qsf` file of your survey's structure. Place this file within your survey's `files` directory. Now run the `createQuestionsJson.py` script to generate the `questions.json` file for your survey.  You will need to set the `SURVEYS` and `OVERWRITE` parameters for your usecase. The generated file will contain the basic structure of the questions in your survey, but it may need to be amended based on additional context. **Important: questions eliciting Personally Identifiable Information (PII) which needs to be sanitized from the output must be marked with the `contains_pii` field.** Full details of the structure of this file are included below.
+Should be placed at the top-level of your survey folder.  This file is used to specify the survey sections, question ids, question text, question types, and other relevant information.  The structure you provide will also inform how your data JSON files will be created. Within the Qualtrics system, navigate to the "Survey" tab of your survey and click on `"Tools" > "Import/Export" > "Export Survey"` to download a `*.qsf` file of your survey's structure. Place this file within your survey's `files` directory. Now run the `createQuestionsJson.py` script to generate the `questions.json` file for your survey.  You will need to set the `SURVEYS` and `OVERWRITE` parameters for your usecase: `SURVEYS` should be a list of all survey directories to be processed, and `OVERWRITE` indicates whether existing output files should be overwritten. The generated file will contain the basic structure of the questions in your survey, but it may need to be amended based on additional context. **Important: questions eliciting Personally Identifiable Information (PII) which needs to be sanitized from the output must be marked with the `contains_pii` field.** Full details of the structure of the `questions.json` file are included below.
 
 You should not include an initial question asking for user consent in your `questions.json`
 
@@ -110,9 +110,9 @@ Example:
 ```
 
 #### metafields.json
-This file is what allows the tool to store the survey metadata that is relevant to your usecase.  It is a simple JSON file containing key/value pairs.  The keys are the names you wish to give the fields and the values provide the location (column number) of the metadata in the qualtrics data export.
+You must create this file to allow the tool to store the survey metadata that is relevant to your usecase.  It is a simple JSON file containing key/value pairs.  The keys are the names you wish to give the fields and the values provide the location (column number) of the metadata in the qualtrics data export.
 
-You can add or remove fields to this file as you wish.  Though it is recommended to start with the provided sample and modify from there.
+You can add or remove fields to this file as you wish.  Though it is recommended to start with the provided sample and modify from there. You may create the `metafields.json` file in your survey's directory and copy the following example into it.
 
 Sample:
 ```
@@ -131,12 +131,12 @@ Sample:
 ```
 
 #### invalid.txt 
-This file is optional, but if included, it will exclude PIDs from the produced sanitized JSON.  Each invalid PID should be written on it's own line.  No commas or other delimiters are necessary. This should also be placed in the `files` directory of your survey.
+This file is optional, but if included, it will exclude PIDs from the produced sanitized JSON.  Each invalid PID should be written on it's own line.  No commas or other delimiters are necessary. If needed, this should be placed in the `files` directory of your survey.
 
 ### Response Coding
-For survey questions that ellicit longer responses, you will likely want to employ some form of coding methodology (e.g. CITATION).  Once you have assigned codes to these responses, you can add the `response_coding.csv` file to the `data` directory and have the script produce figures and also split the data across any roles you've specified.
+For survey questions that ellicit longer responses, you will likely want to employ some form of coding methodology (e.g. [1]).  Once you have assigned codes to these responses, you can add the `response_coding.csv` file to the `data` directory and have the script produce figures and also split the data across any roles you've specified.
 
-You can run the tool without including `response_coding.csv`, but ensure that you set `RESPONSE_CODING_DONE` to `False` in `config.py`.
+You can run the tool without including `response_coding.csv`, but ensure that you set `RESPONSE_CODING_DONE` to `False` in `settings.py`.
 
 Note: Additional tooling is available to facilitate the coding process and the creation of the `response_coding.csv`.
 
@@ -167,7 +167,7 @@ Below is a directory map that should help you easily determine where to place yo
 │       │   │── invalid.txt
 │       ├── metafields.json
 │       ├── questions.json
-├── config.py
+├── settings.py
 ├── data_reader.py
 ├── run_all.py
 ├── README.md
@@ -214,8 +214,11 @@ The `run_all.py` file calls all relevant scripts for data analysis, including cl
 
 - The `pathmanager.py` file provides an abstraction of the directory structure for the `plot.py` file.
 
-- The `qualtrics_reader.py` file reads a *.qsf file from Qualtrics and extracts relevant information into a `questions.json` file.
+- The `qualtrics_reader.py` file reads a `*.qsf` file from Qualtrics and extracts relevant information into a `questions.json` file.
 
 - The `config.py` file stores and manages data about surveys in the system.
 
 - The `csv2json.py` file manages conversion of survey output data into the correct JSON format.
+
+## Citations
+ - [1] Donna Spencer. 2009. Card sorting: Designing usable categories. Rosenfeld Media.

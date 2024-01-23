@@ -4,16 +4,16 @@ from scripts.sanitize import sanitize
 from scripts.json_converter import convert
 from scripts.partition import partition
 from scripts.plot import plot
-import os, config
+import os, settings
 
-for survey in config.SURVEYS:
+for survey in settings.SURVEYS:
 
     survey_path = os.path.join("surveys", survey)
     print("Processing %s survey..." % (survey,))
 
-    if config.PRE_PROCESS:
+    if settings.PRE_PROCESS:
 
-        if config.FROM_SOURCE:
+        if settings.FROM_SOURCE:
 
             # Generate JSON Files from CSV
             CSVConverter(survey_path).convertCSV()
@@ -31,12 +31,12 @@ for survey in config.SURVEYS:
         print("Converting JSON to CSV...")
         convert(survey_path)
 
-        if config.RESPONSE_CODING_DONE:
+        if settings.RESPONSE_CODING_DONE:
             ## Partition response coding
             print("Partitioning Response Coding Files...")
             partition(survey_path)
 
-    if config.PLOT:
+    if settings.PLOT:
 
         # Make the figs directory if it doesn't exist
         fig_path = os.path.join(survey_path,"figs")
@@ -45,7 +45,7 @@ for survey in config.SURVEYS:
 
         ## Plot the results
         print("Plotting Results (this may take awhile)...")
-        for ft in config.FILE_TYPES:
+        for ft in settings.FILE_TYPES:
             print(f"Plotting {survey} survey as {ft}...")
             plot(survey_path, ft)
 
