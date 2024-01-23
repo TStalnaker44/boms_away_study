@@ -125,28 +125,9 @@ Survey Flow:
 - AI Specific Questions
 - Demographic Questions
 
-## Data Analysis Folder Structure and Scripts
+## Data Analysis Tooling
+For an in-depth look at our tooling suite and data, please explore the `data_analysis` directory and see its associated README.
 
-
-### The Data Folder
-
-The data folder for each survey is further sub-divided into three additional folders:
-- `all`: the most useful, contains all response data for questions
-- `loose`: provides response data by role (i.e. producer).  Filtering is loose, so a producer + consumer is still considered a producer. 
-- `strict`: provides response data by specific role.  Filtering is strict, so a producer + consumer is not considered a consumer.  That is, all combinations of roles are represented in distinct CSV files.
-
-### CSV Files
-There are two CSV files at the top level:
-- `single`: contains the responses to all single answer questions
-- `response_coding`: contains the results of our collective coding process
-
-There are two sub-folders that contain exclusively CSV files:
-- `multi_select`: contains a CSV for each multiple select question
-- `ranked`: contains a CSV for each rank by preference question
-
-### Response Coding Files
-Files used for the analysis of response coding are found in the `response_coding` folder.  These files include:
-- `comparer.py` which looks for differences between two sets of codings.  It generates a file `temp.csv` that marks an 'X' where a difference is detected.
 
 ## Additional Content
 
