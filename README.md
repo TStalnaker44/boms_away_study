@@ -145,10 +145,7 @@ Each parent folder has three nested folders:
 - `figs`: contains figures plotting the collected data
 - `files`: contains the raw, sanitized JSON files and a file listing valid response IDs
 
-Each parent folder also has a few files:
-- `csv2json.py`: converts raw Qualtrics data into a human-readable JSON representation
-- `likert.txt`: lists the likert scale questions in the survey
-- `questions.json`: A JSON file mapping question IDs to text
+Each parent folder also has a `questions.json` file mapping question IDs to text.
 
 ### The Data Folder
 
