@@ -32,7 +32,7 @@ The `image_attribution.PNG` file provides attribution information for the graphi
 
 The `additional_content` folder contains supplementary and expanded resources that would not fit cleanly within our paper submission.  These resources are also included at the end of this README.
 
-The `data_analysis` folder contains aggregated survey results and the code used to analyze these results.  The structure of the `data_analysis` directory is described below. 
+The `data_analysis` folder contains aggregated survey results and the code used to analyze these results.  **The `data_analysis` directory contains its own README with detailed information on its structure.**
 
 ## Data Analysis Tooling
 For an in-depth look at our tooling suite and data, please explore the `data_analysis` directory and see its associated README.
