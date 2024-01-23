@@ -215,5 +215,3 @@ The `run_all.py` file calls all relevant scripts for data analysis, including cl
 - The `config.py` file stores and manages data about surveys in the system.
 
 - The `csv2json.py` file manages conversion of survey output data into the correct JSON format.
-
-- 
