@@ -1,0 +1,4 @@
+ResponseID,Other (please specify),To make it easier to understand dependencies in complex projects,To proactively identify replacements for components that reach end-of-life,To meet software licensing requirements,I write tools that generate SBOMs; I don't currently consume them.,To meet regulatory requirements,To monitor my project's dependencies,To keep track of dependency vulnerabilities
+R_1etaPjf7ww473XA,,,,1,,,,
+R_1M4HoMp9oXP92Jc,1,1,,,1,,,1
+R_1gnCm7rvxLjS2rN,,1,1,1,,1,1,1

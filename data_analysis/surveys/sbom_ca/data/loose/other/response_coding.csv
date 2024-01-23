@@ -1,0 +1,5 @@
+In JSON,Response ID,S1,S3,S5,S6,S8,S10,P4,P8,P9,C3,C7,SM3,SC8,SC9
+0,R_3NP6V06n6Ea5N5Z,['DependencyTracker'],,,,,,,,,,,,"['ReadDescription', 'CodeReview']",['PackageManager']
+17,R_2X02uH9Mm87FxHp,"['DependencyTracker', 'Security', 'Licensing']",['BadAnswer'],['SbomDistribution'],['SupportRelatedOrganizations'],['SupportRelatedOrganizations'],['VendorDiscretion'],,['Database'],['Tooling'],,['Inconsistency'],['BadAnswer'],['ReadDescription'],['PackageManager']
+252,R_wLxhLmNWViOfUVH,"['DependencyTracker', 'RelationsInSystem']","['Version', 'Checksum', 'Dependencies', 'URL', 'License', 'Identifier', 'Author', 'Organization']",,,['BadAnswer'],,['ReproducibleStates'],['TiedToSoftwareVersion'],"['TooManyLanguagesInProject', 'SyncingSbomVersions', 'Tooling']",,"['Inconsistency', 'DifferentStandards', 'VersioningIssues']",,"['Versioning', 'ReadDescription']",['PackageManager']
+279,R_6JBdPlVxaRCxjah,['DependencyTracker'],,,,,,,,,,,,['SecurityExperts'],['SecurityExperts']

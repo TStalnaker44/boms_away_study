@@ -1,0 +1,85 @@
+{
+    "definition": {
+        "D1": {
+            "question": "Are you familiar with the concept of Software Bills of Materials (SBOMs)?",
+            "type": "single-select"
+        },
+        "D2": {
+            "question": "What do you consider to be the minimum adequate baseline component/dependency information for an SBOM?",
+            "type": "short-answer"
+        },
+        "D3": {
+            "question": "In your estimation, how many SBOMs meet this minimum standard in practice?",
+            "type": "short-answer"
+        },
+        "D4": {
+            "question": "Are you aware of any specific requirements that organizations must meet when creating SBOMs for software products that will be used in highly regulated industries, such as healthcare, finance, or defense? If so, please describe those requirements.",
+            "type": "short-answer"
+        }
+    },
+    "legal": {
+        "L1": {
+            "question": "Updating equipment in critical facilities, like hospitals, can be difficult since all equipment needs to be first approved by government regulators. How do you think that an SBOM that includes information about the software and hardware components of such equipment could facilitate faster and more accurate approvals, if at all?",
+            "type": "short-answer"
+        },
+        "L2": {
+            "question": "Are you aware of any disputes relating to an organization's creation or use of SBOMs?",
+            "type": "single-select-with-other"
+        },
+        "L3": {
+            "question": "If an SBOM is inaccurate or incomplete, what legal liability do you see for the entity that produced it?",
+            "type": "short-answer"
+        },
+        "L4": {
+            "question": "What liability do you see for the creators of tools used to automatically generate SBOMs that are incomplete or inaccurate?",
+            "type": "short-answer"
+        },
+        "L5": {
+            "question": "In your opinion, to what extent will the provision of an accurate and complete SBOM become a standard provision in software licenses and related contracts?",
+            "type": "short-answer"
+        },
+        "L6": {
+            "question": "Should the creator of an SBOM be required to provide a certification that the SBOM is correct and complete? Please elaborate on your response.",
+            "type": "short-answer"
+        },
+        "L7": {
+            "question": "What steps can organizations take to protect their proprietary information and trade secrets when creating and distributing SBOMs?",
+            "type": "short-answer"
+        },
+        "L8": {
+            "question": "An SBOM could reveal a vulnerability or security issue in a software component. To what extent are organizations legally obligated to disclose any vulnerabilities or security issues they discover as a result of creating an SBOM to their customers, partners, or the public?",
+            "type": "short-answer"
+        }
+    },
+    "AI": {
+        "AI2": {
+            "question": "GitHub Copilot is a service described as an \"AI pair programmer.\" Copilot can quickly generate code based on prompts from human programmers. To accomplish this, the AI system learned to generate code through training on open-source code from the Internet, including material hosted in public GitHub code repositories. In late 2022, a class action lawsuit was filed against GitHub, Microsoft (GitHub's owner), and OpenAI (the company behind the AI model which powers GitHub Copilot). The plaintiffs in the GitHub Copilot litigation claim, among other things, that by training their systems on public GitHub repositories, the defendants have violated the attribution requirements of certain open-source licenses which apply to the code on which the AI model was trained. In your opinion, would the use of complete and detailed DataBOMs be sufficient to cover the attribution requirements of open source software licenses?",
+            "type": "short-answer"
+        },
+        "AI3": {
+            "question": "Do you anticipate DataBOMs being used with other large AI projects, like ChatGPT, that are trained on large corpora from the Internet?",
+            "type": "single-select"
+        }
+    },
+    "demographics": {
+        "Q1": {
+            "question": "How many years of legal experience do you have?",
+            "type": "single-text"
+        },
+        "Q2": {
+            "question": "Which country / countries are you and / or your organization based in?",
+            "type": "single-text",
+            "contains_pii": true
+        },
+        "Q3": {
+            "question": "Please enter your email address. This will be used to contact you if you are identified as the recipient of the Amazon gift card.",
+            "type": "single-text",
+            "contains_pii": true
+        },
+        "Q4": {
+            "question": "Would you be willing to participate in a follow-up interview based on your responses?",
+            "type": "single-select",
+            "contains_pii": true
+        }
+    }
+}

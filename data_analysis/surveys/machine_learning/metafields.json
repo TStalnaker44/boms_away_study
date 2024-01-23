@@ -1,0 +1,12 @@
+{"StartDate":0, 
+ "EndDate":1, 
+ "Status":2, 
+ "IPAddress":3,
+ "Progress":4, 
+ "Duration":5, 
+ "Finished":6, 
+ "RecordedDate":7, 
+ "ResponseID":8, 
+ "LocationLatitude":13, 
+ "LocationLongitude":14,
+ "UserLanguage":16}

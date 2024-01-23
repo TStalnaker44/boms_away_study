@@ -1,4 +1,0 @@
-In JSON,Response ID,S1,S3,S5,S6,S8,S10,P4,P8,P9,C3,C7,Sm3,Sc8,Sc9
-2,R_pSFEcWrIVGPzkcN,"['DependencyTracker', 'Debugging', 'Licensing', 'Documentation']","['Name', 'URL', 'License', 'Linking', 'Identifier', 'Modified']","['Inconsistency', 'Tooling']",['Tooling'],,,,,,,,"['Templates','VersionControlIntegration']","['CodeReview', 'TestCases']",['ManualRecording']
-24,R_2tgjPTTsOMyIVO4,"['DependencyTracker', 'Security', 'Provenance']","['Name', 'License', 'Identifier', 'Version', 'URL', 'Vulnerabilities']","['Tooling', 'AmbiguousGuidance', 'ManagementCost', 'YoungTechnology']",['Communication'],,,,,,,,['BadAnswer'],,
-123,R_2dLMPLyI3CfVNMD,['DependencyTracker'],,"['Tooling', 'Inconsistency']","['Communication','Standardization', 'SupportRelatedOrganizations']",,,,,,,,['BadAnswer'],,

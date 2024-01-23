@@ -1,0 +1,4 @@
+In JSON,Response ID,S4,S5,FS5,FS7,FS10,NU1,NU2,P5,P7,IP2,C5,FN3,O2,O4,
+1,R_2BmS1TQTioc9AGV,['PackageManager'],,['NoResponse'],['NoResponse'],,,,"['InternalTools', 'PackageManager']",,,['NoResponse'],,,,
+10,R_ebXY3RIvhqmZxBf,"['PackageFile', 'PackageManager']",,['Requirement'],['IncorrectDependencies'],['MavenPlugins'],,,['PackageManager'],,,['MavenPlugins'],,,,
+13,R_DqmdF5rv1lhdemJ,['PackageManager'],,['Education'],['NoIssues'],['MavenPlugins'],,,['PackageManager'],['TiedToSoftwareVersion'],,,,,,
