@@ -150,8 +150,15 @@ The question IDs used in the `response_coding.csv` file must match those found i
 ### Data Files
 Cleaned and partitioned data will be stored in the `data` directory. If the directory does not already exist, the tool will create it.  Data is stored in CSV form and is split by the roles specified previously.  Any manual changes made to these files will be overwritten the next time the scripts are run. 
 
+The `data` directory for each survey, where applicable, is further sub-divided into three additional folders:
+- `all`: the most useful, contains all response data for questions
+- `loose`: provides response data by role (as assigned by the `identifier` tag). Filtering is loose, so a *producer-consumer* would still be considered a *producer*.
+- `strict`: provides response data by specific role (as assigned by the `identifier` tag). Filtering is strict, so a *producer-consumer* is not considered a *consumer* nor *producer*. That is, all combinations of roles are represented in distinct CSV files.
+
 ### Figures
 Automatically generated figures are found in the `figs` directory. If the directory does not already exist, the tool will create it.  Figures can be generated in a variety of formats (PNG and PDF for example) and are additionally plotted by role.  These figures are intended to give you quick insights into your data and are not paper ready.
+
+The `figs` directory is sub-divided in the same way as the `data` directory (see above).
 
 ## Directory Structure
 Below is a directory map that should help you easily determine where to place your files.
@@ -223,6 +230,10 @@ The `run_all.py` file calls all relevant scripts for data analysis, including cl
 - The `config.py` file stores and manages data about surveys in the system.
 
 - The `csv2json.py` file manages conversion of survey output data into the correct JSON format.
+
+## Response Coding
+Files used for the analysis of response coding are found in the `response_coding` folder.  These files include:
+- `comparer.py` which looks for differences between two sets of codings.  It generates a file `temp.csv` that marks an 'X' where a difference is detected.
 
 ## Citations
  - [1] Donna Spencer. 2009. Card sorting: Designing usable categories. Rosenfeld Media.
