@@ -1,0 +1,261 @@
+{
+    "self_identification": {
+        "ID1": {
+            "question": "How are SBOMs (Software Bill of Materials) used in your projects? Please select all options that pertain to the projects you contribute to:",
+            "type": "multi-select-with-other",
+            "identifier": true,
+            "roles":{"producer":"We create SBOMs for the software that we produce",
+                    "consumer":"We use or analyze the SBOMs of other projects (including our dependencies)",
+                    "familiar_non_user":"I am familiar with SBOMs, but we do not use them in our projects",
+                    "unfamiliar":"I am unfamiliar with SBOMs",
+                    "other":"Other (please specify)"
+            }
+        }
+    },
+    "shared": {
+        "S1": {
+            "question": "Indicate your agreement with the following statement: \u201cOther well known / well established open source projects are producing SBOMs\"",
+            "type": "likert"
+        },
+        "S2": {
+            "question": "Indicate your agreement with the following statement: \u201cOther well known / well established open source projects are consuming SBOMs\"",
+            "type": "likert"
+        },
+        "S3": {
+            "question": "As an open source project, do you publish a list of your project's dependencies?",
+            "type": "single-select"
+        },
+        "S4": {
+            "question": "How do your projects obtain the list of dependencies? Are there any specific tools or techniques used to that end?",
+            "type": "short-answer"
+        },
+        "S5": {
+            "question": "Why do your projects not publish their dependencies?",
+            "type": "short-answer"
+        }
+    },
+    "familiar_shared": {
+        "FS1": {
+            "question": "Which SBOM formats/standards do your projects use? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "FS2": {
+            "question": "Indicate your agreement with the following statement: \u201cThe use of SBOMs is critical in software development\"",
+            "type": "likert"
+        },
+        "FS3": {
+            "question": "Indicate your agreement with the following statement: \u201cCurrent SBOM standards / specifications meet the needs of users and industry\u201d",
+            "type": "likert"
+        },
+        "FS4": {
+            "question": "Which of the following deficiencies have you or your projects encountered in current SBOM standards / specifications? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "FS5": {
+            "question": "How can we address (some of) the selected deficiencies in SBOM standards / specifications?",
+            "type": "short-answer"
+        },
+        "FS6": {
+            "question": "Indicate your agreement with the following statement: \u201cCurrent SBOM tool support meets the needs of users.\u201d",
+            "type": "likert"
+        },
+        "FS7": {
+            "question": "What are some issues that you or your projects have encountered in SBOM tooling (tools that generate/process SBOMs)?",
+            "type": "short-answer"
+        },
+        "FS8": {
+            "question": "How can we address current deficiencies in SBOM tooling? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "FS9": {
+            "question": "Do your projects have a process/method to verify whether SBOMs completely and correctly report all dependencies and their metadata?",
+            "type": "single-select"
+        },
+        "FS10": {
+            "question": "What process/method do your projects have to verify whether SBOMs completely and correctly report all dependencies and their metadata?",
+            "type": "short-answer"
+        }
+    },
+    "non_users": {
+        "NU1": {
+            "question": "What tools and/or techniques do you use for dependency management in your software projects?",
+            "type": "short-answer"
+        },
+        "NU2": {
+            "question": "Why do you prefer these tools and/or techniques over other methods?",
+            "type": "short-answer"
+        }
+    },
+    "producers_shared": {
+        "P1": {
+            "question": "Select all statements that apply to your projects:",
+            "type": "multi-select"
+        },
+        "P2": {
+            "question": "At what point(s) in the software development process should SBOMs be generated? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "P3": {
+            "question": "Why do your projects create SBOMs? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "P4": {
+            "question": "What benefits have your projects observed from producing SBOMs? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "P5": {
+            "question": "What tools do your projects use to assist in the creation of SBOMs, if any?",
+            "type": "short-answer"
+        },
+        "P6": {
+            "question": "Do your projects have any strategies for managing SBOM versions?",
+            "type": "single-select"
+        },
+        "P7": {
+            "question": "What strategies do your projects have for managing SBOM versions? Are there any specific tools involved?",
+            "type": "short-answer"
+        },
+        "P8": {
+            "question": "What issues have your projects encountered when producing SBOMs? Select all that apply.",
+            "type": "multi-select-with-other"
+        }
+    },
+    "internal_producers": {
+        "IP1": {
+            "question": "Do your projects share their SBOMs externally?",
+            "type": "single-select"
+        },
+        "IP2": {
+            "question": "Why are your projects' SBOMs not shared externally?",
+            "type": "short-answer"
+        }
+    },
+    "external_producers": {
+        "EP1": {
+            "question": "How do your projects publish / distribute your created SBOMs? Select all that apply.",
+            "type": "multi-select-with-other"
+        }
+    },
+    "consumers": {
+        "C1": {
+            "question": "What do your projects use SBOMs for? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "C2": {
+            "question": "Which of the following benefits have your projects observed from using SBOMs? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "C3": {
+            "question": "How often do your projects use SBOMs during software development?",
+            "type": "single-select-with-other"
+        },
+        "C4": {
+            "question": "Do your projects process or analyze the SBOMs of their software dependencies (if available)?",
+            "type": "single-select"
+        },
+        "C5": {
+            "question": "How do your projects process or analyze the SBOMs of their dependencies? What tools, if any, are involved in the process?",
+            "type": "short-answer"
+        },
+        "C6": {
+            "question": "Which of the following issues have your projects encountered in using SBOMs? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "C7": {
+            "question": "How do you prefer the SBOMs of other projects to be shared with you? Rank by preference (by dragging the options).",
+            "type": "ranked-with-other",
+            "options": [
+                "Stored with a trusted third party",
+                "Located in repositories along with the source code",
+                "Downloadable from project website",
+                "Available from the project developers upon request",
+                "Attached to software binaries",
+                "Other(s)"
+            ]
+        }
+    },
+    "familiar_non_users": {
+        "FN1": {
+            "question": "Which of the following SBOM formats have you heard of?",
+            "type": "multi-select-with-other"
+        },
+        "FN2": {
+            "question": "Have you used SBOMs in the past?",
+            "type": "single-select"
+        },
+        "FN3": {
+            "question": "Why do you not currently use SBOMs?",
+            "type": "short-answer"
+        }
+    },
+    "oboms": {
+        "O1": {
+            "question": "Are you familiar with Operations Bills of Materials (OBOMs)?",
+            "type": "single-select"
+        },
+        "O2": {
+            "question": "How would you describe OBOMs? What are their key features?",
+            "type": "short-answer"
+        },
+        "O3": {
+            "question": "Do you use OBOMs in your projects?",
+            "type": "single-select"
+        },
+        "O4": {
+            "question": "What should OBOMs be used for?",
+            "type": "short-answer"
+        }
+    },
+    "Demographics": {
+        "Q1": {
+            "question": "How many years of experience in software development do you have?",
+            "type": "single-text"
+        },
+        "Q2": {
+            "question": "How would you describe your primary role?",
+            "type": "single-select-with-other"
+        },
+        "Q3": {
+            "question": "What is your highest level of education?",
+            "type": "single-select-with-other"
+        },
+        "Q4": {
+            "question": "Which programming languages have you most used in past projects? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "Q5": {
+            "question": "What types of systems have you developed?",
+            "type": "multi-select-with-other"
+        },
+        "Q6": {
+            "question": "For which domains (e.g., banking or healthcare) have you developed applications / systems?",
+            "type": "single-text"
+        },
+        "Q7": {
+            "question": "Do you primarily work on open source or closed source projects?",
+            "type": "single-select"
+        },
+        "Q8": {
+            "question": "Do you have a background in computer security? Formal (college classes, degree, certification) or informal (self-learning or other training)?",
+            "type": "single-select"
+        },
+        "Q9": {
+            "question": "Do you have a background in software licensing? Formal (college classes, degree, certification) or informal (self-learning or other training)?",
+            "type": "single-select"
+        },
+        "Q10": {
+            "question": "How often did you release or help release a new major version of an application / software over the past two years? Please give your best estimate; if you develop more than one software / application, please answer based on the most frequently updated software / application.",
+            "type": "single-select"
+        },
+        "Q11": {
+            "question": "Which country / countries are you and / or your organization based in?",
+            "type": "single-text",
+            "contains_pii": true
+        },
+        "Q12": {
+            "question": "Please enter your email address. This will be used to contact you for compensation. If we are interested in your responses, we may contact you for a follow-up interview, if you are willing.",
+            "type": "single-text",
+            "contains_pii": true
+        }
+    }
+}

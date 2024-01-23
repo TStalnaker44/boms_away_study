@@ -1,8 +1,0 @@
-In JSON,Response ID,S4 (Q25),S5 (Q81),FS5 (Q12),FS7 (Q64),FS10 (Q34),NU1 (Q17),NU2 (Q18),P5 (Q5),P7 (Q7),IP2 (Q83),C5 (Q6),FN3 (Q23),O2 (Q38),O4 (Q39),
-0,R_OIFPGROQKKKFXy1,['NoTechnique'],,['LeadingOrganizationsForceUse'],['NoResponse'],,['NoTechnique'],['NoResponse'],,,,,['NotPressing'],,,
-6,R_1l65kF3dZ6EjvRP,['PackageManager'],,['NoResponse'],['NoResponse'],,['ToolAssisted'],['BuiltIn'],,,,,"['Time', 'CommunityInterest']",,,
-7,R_1rrmdvdJbMbMjpL,['NoTechnique'],,['ImproveOverTime'],['BadAnswer'],,['NoTechnique'],['LessOverhead'],,,,,"['DependedOn', 'NotWorthEffort']",,,
-14,R_24vJZ4SlgCPtrqV,['NoTechnique'],,['AdditionalInformation'],['NoResponse'],,['PackageManager'],['NoOtherWay'],,,,,['NotRequired'],"['SoftwareVersion', 'DeploymentRequirements', 'RuntimeRequirements']",['NoResponse'],['NoResponse']
-17,R_2dmDMUTW9P2ISiB,['PackageManager'],,['CryptographicVerification'],['NoIssues'],,['BadAnswer'],['LessOverhead'],,,,,['NotRequired'],,,
-18,R_1Hjbzz2khJ4Cwpu,['PackageFile'],,"['UseExistingTools', 'Standardization']",['NotBuiltIntoTools'],,"['PackageFile', 'PackageManager']",['BuiltIn'],,,,,['BadAnswer'],,,
-21,R_1i87XDsBprVq0hT,"['ToolAssisted', 'ManuallyTracked']",,['BetterMotivation'],"['SbomsUnavailable', 'UsageUnclear']",,"['PackageManager', 'ToolAssisted']",['LessOverhead'],,,,,['NoValue'],,,

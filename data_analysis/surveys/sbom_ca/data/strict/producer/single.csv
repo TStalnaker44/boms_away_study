@@ -1,0 +1,9 @@
+ResponseID,S4,S7,P7,C4,C5,T5,E2,E3,SC1,SC2,SC3,SC4,SC5,SC6,Q1,Q2,Q3,Q7,Q6,Q8,Q9,Q10
+R_3HviW61b1bwSd9l,Agree,,Yes,,,,,,Agree,No,,,,,,Project Manager,Master's Degree,Medical Internet,Both open source and closed source,"Yes, formal","Yes, formal",Annually
+R_2ceH0MWA48ZbGWV,Agree,,No,,,,,,Neutral,Yes,Neutral,Strongly disagree,No,,10,Programmer,Doctoral Degree,Construction sector / civil engineering,Both open source and closed source,"Yes, formal","Yes, informal",Quarterly
+R_OxHDuxOp8wX3Co1,Strongly disagree,,Yes,,,,,,Strongly agree,Yes,Agree,Disagree,Yes,Yes,6,Programmer,Bachelor's Degree,Fintech,Both open source and closed source,"Yes, formal",No,More frequently
+R_3Mapsvs7nPqOx01,Strongly agree,,Yes,,,,,,Agree,Yes,Agree,Disagree,Yes,Yes,7,Programmer,Bachelor's Degree,Na ,Open source only,"Yes, informal","Yes, informal",Monthly
+R_2Y2DOiMoGMWSQUx,Neutral,,No,,,,,,Strongly agree,Yes,Agree,Disagree,No,,20,DevOps Engineer,Bachelor's Degree,"defence, financial, OSS",Both open source and closed source,"Yes, informal","Yes, informal",More frequently
+R_2QyoYDd5Nw95V9i,Strongly agree,,No,,,,,,Strongly agree,Yes,Disagree,Disagree,No,,40,DevOps Engineer,Bachelor's Degree,"Public Utility, Point of Sale, Business Services",Both open source and closed source,"Yes, formal","Yes, formal",Quarterly
+R_1lmiszxqcb8G6Br,Neutral,,No,,,,,,Strongly agree,Yes,Agree,Disagree,No,,20,Engineering Leadership,Some college,"Financial, Healthcare, Manufacturing, Public Sector",Closed source only,"Yes, informal","Yes, informal",Quarterly
+R_6JS2nMbliGrg85X,Agree,,,,,,,,Strongly agree,No,,,,,,Security Team,Bachelor's Degree,Security team,Closed source only,"Yes, formal","Yes, informal",Never

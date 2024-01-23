@@ -1,0 +1,181 @@
+{
+    "background": {
+        "B1": {
+            "question": "Are you familiar with the concept of Software Bill of Materials (SBOM)?",
+            "type": "single-select"
+        },
+        "B2": {
+            "question": "Which of the following SBOM formats are you familiar with? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "B3": {
+            "question": "Are you aware of any existing SBOM standards / specifications for ML/DL systems (AIBOMs)?",
+            "type": "single-select-with-other"
+        }
+    },
+    "aibom_fields": {
+        "AI1": {
+            "question": "Indicate your agreement with the following statement: \"Current SBOM formats adequately support machine/deep learning (ML/DL) systems.\"",
+            "type": "likert"
+        },
+        "AI2": {
+            "question": "What data fields should be included in SBOMs to adequately describe a machine/deep learning (ML/DL) system? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "AI3": {
+            "question": "Can SBOMs of ML/DL systems (AIBOMs) follow the same current SBOM specifications and standards?",
+            "type": "single-select"
+        },
+        "AI4": {
+            "question": "Please describe a potential new solution for specifying SBOMs of ML/DL systems (AIBOMS).",
+            "type": "short-answer"
+        },
+        "AI5": {
+            "question": "Are you aware of any tools which currently facilitate the automatic generation of AIBOMs?",
+            "type": "single-select-with-other"
+        },
+        "AI6": {
+            "question": "How would you prefer AIBOMs be distributed? Rank by preference (by dragging the options).",
+            "type": "ranked-with-other",
+            "options": [
+                "Stored with trusted third party",
+                "Located in repositories along with source code or model",
+                "Downloadable from project website",
+                "Available from the project developers upon request",
+                "Attached to software binaries",
+                "Other(s)"
+            ]
+        },
+        "AI7": {
+            "question": "How can we ensure that AIBOMs completely and correctly report all the dependencies of ML/DL systems?",
+            "type": "short-answer"
+        }
+    },
+    "databom_fields": {
+        "D1": {
+            "question": "Indicate your agreement with the following statement: \"Datasets for ML/DL systems should come with a bill of materials (<b>DataBOM</b>).\"",
+            "type": "likert"
+        },
+        "D2": {
+            "question": "Are you aware of any existing standards for DataBOMs?",
+            "type": "single-select-with-other"
+        },
+        "D3": {
+            "question": "What data fields should be included in a DataBOM to adequately describe a dataset for a ML/DL system? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "D4": {
+            "question": "Are you aware of any tools that generate DataBOMs?",
+            "type": "single-select-with-other"
+        },
+        "D5": {
+            "question": "What do you think the relationship between AIBOMs and DataBOMs should be?",
+            "type": "short-answer"
+        },
+        "D6": {
+            "question": "How should DataBOMs be shared / distributed? Rank by preference (by dragging the options).",
+            "type": "ranked-with-other",
+            "options": [
+                "Stored with a trusted third party",
+                "Located alongside the dataset",
+                "Downloadable from maintainer or owner website",
+                "Available from owner upon request",
+                "Other(s)"
+            ]
+        },
+        "D7": {
+            "question": "What are some of the benefits you expect to see from using DataBOMs, if any?",
+            "type": "short-answer"
+        },
+        "D8": {
+            "question": "What main challenges do you foresee in the creation and use of DataBOMs?",
+            "type": "short-answer"
+        },
+        "D9": {
+            "question": "How can we ensure that DataBOMs completely and correctly report all the dependencies and/or components of datasets used by ML/DL systems?",
+            "type": "short-answer"
+        }
+    },
+    "challenges": {
+        "C1": {
+            "question": "What are some of the benefits you expect to see from using AIBOMs, if any?",
+            "type": "short-answer"
+        },
+        "C2": {
+            "question": "What main challenges do you foresee in the creation and use of AIBOMs?",
+            "type": "short-answer"
+        },
+        "C3": {
+            "question": "Do vulnerability databases (such as CVE) exist for ML/DL systems?",
+            "type": "single-select-with-other"
+        },
+        "C4": {
+            "question": "Indicate your agreement with the following statement: \"Vulnerability databases for ML/DL systems meet the security needs of developers and consumers\"",
+            "type": "likert"
+        },
+        "C5": {
+            "question": "Do vulnerability databases (such as CVE) exist for datasets of ML/DL systems?",
+            "type": "single-select-with-other"
+        },
+        "C6": {
+            "question": "Indicate your agreement with the following statement: \"Vulnerability databases for datasets of ML/DL systems meet the security needs of developers and consumers\"",
+            "type": "likert"
+        },
+        "C7": {
+            "question": "Given recent concerns regarding scraped public material being included in machine/deep learning datasets, how should AIBOMs address licensed material, if at all?",
+            "type": "short-answer"
+        }
+    },
+    "demographics": {
+        "Q1": {
+            "question": "How many years of experience developing machine/deep learning systems do you have?",
+            "type": "single-text"
+        },
+        "Q2": {
+            "question": "How would you describe your primary role?",
+            "type": "single-select-with-other"
+        },
+        "Q3": {
+            "question": "What is your highest level of education?",
+            "type": "single-select-with-other"
+        },
+        "Q4": {
+            "question": "Which programming languages have you most used in past projects? Select all that apply.",
+            "type": "multi-select-with-other"
+        },
+        "Q5": {
+            "question": "Which machine / deep learning models do you use most frequently?",
+            "type": "single-select-with-other"
+        },
+        "Q6": {
+            "question": "Do you primarily work on open source or closed source projects?",
+            "type": "single-select"
+        },
+        "Q7": {
+            "question": "For which domains (e.g., banking or healthcare) have you developed applications / systems?",
+            "type": "single-text"
+        },
+        "Q8": {
+            "question": "Do you have a background in computer security? Formal (college classes, degree, certification) or informal (self-learning or other training)?",
+            "type": "single-select"
+        },
+        "Q9": {
+            "question": "Do you have a background in software licensing? Formal (college classes, degree, certification) or informal (self-learning or other training)?",
+            "type": "single-select"
+        },
+        "Q10": {
+            "question": "How often did you release or help release a new major version of an application / software over the past two years? Please give your best estimate; if you develop more than one software / application, please answer based on the most frequently updated software / application.",
+            "type": "single-select"
+        },
+        "Q11": {
+            "question": "Which country / countries are you and / or your organization based in?",
+            "type": "single-text",
+            "contains_pii": true
+        },
+        "Q12": {
+            "question": "Please enter your email address. This will be used to contact you for compensation. If we are interested in your responses, we may contact you for a follow-up interview, if you are willing.",
+            "type": "single-text",
+            "contains_pii": true
+        }
+    }
+}

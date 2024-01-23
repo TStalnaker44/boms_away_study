@@ -1,0 +1,2 @@
+ResponseID,Other (please specify),To make it easier to understand dependencies in complex projects,To proactively identify replacements for components that reach end-of-life,As a data source for tooling that computes dependency freshness metrics and graphs how they have changed over time (https://github.com/corgibytes/freshli),To monitor my project's dependencies,To keep track of dependency vulnerabilities
+R_2uq9Acrc4ykecue,1,1,1,1,1,1

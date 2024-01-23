@@ -1,0 +1,107 @@
+{"general":
+    {"G1": 
+        {"question":"What are the challenges that people currently face in the supply chain of cyber-physical systems?",
+        "type":"short-answer"},
+    "G2": 
+        {"question":"What is the role of open-source software in cyber-physical systems?", 
+        "type":"short-answer"}
+    },
+ "sbom_background":{
+    "SB1": 
+        {"question":"Are you familiar with the concept of Software Bills of Material (SBOMs)?",
+        "type":"single-select"}
+    },
+"hbom_background":{
+    "HB1": 
+        {"question":"Are you familiar with the concept of a Hardware Bill of Materials (HBOM)?",
+        "type":"single-select"},
+    "HB2": 
+        {"question":"Have you ever used HBOMs in a project?",
+        "type":"single-select"},
+    "HB3": 
+        {"question":"Which formats have you used for HBOMs?",
+        "type":"multi-select-with-other"}
+    },
+"likert":{
+    "L1": 
+        {"question":"SBOMs are a potential solution to problems that people face in the supply chain of cyber-physical systems",
+        "type":"likert"},
+    "L2": 
+        {"question":"SBOMs can be used to effectively manage open-source components in cyber-physical systems",
+        "type":"likert"},
+    "L3": 
+        {"question":"Current formats (e.g., SPDX or CycloneDX) convey all the information necessary to create inventories of physical components",
+        "type":"likert"},
+    "L4": 
+        {"question":"For a cyber-physical system, the software and hardware manifests (i.e., inventories) should be separated into an SBOM and a HBOM (Hardware Bill of Materials).",
+        "type":"likert"},
+    "L5": 
+        {"question":"SBOMs/HBOMs can be effectively used to demonstrate compliance with regulatory requirements and standards in cyber-physical systems.",
+        "type":"likert"},
+    "L6": 
+        {"question":"Tool support exists for creating and processing SBOMs/HBOMs for cyber-physical systems.",
+        "type":"likert"}
+    },
+"open":{
+    "O1": 
+        {"question":"What are the necessary data fields that an SBOM or HBOM must contain to accurately and sufficiently describe software/hardware components in cyber-physical systems?",
+        "type":"short-answer"},
+    "O2": 
+        {"question":"What is the role of SBOMs/HBOMs in ensuring the traceability of components in cyber-physical systems?",
+        "type":"short-answer"},
+    "O3": 
+        {"question":"How can the use of SBOMs/HBOMs impact risk assessment in cyber-physical systems?",
+        "type":"short-answer"},
+    "O4": 
+        {"question":"How should SBOMs/HBOMs for cyber-physical systems be distributed? Rank by preference (by dragging the options).",
+        "type":"ranked-with-other",
+        "options":[
+            "Stored with trusted third party",
+            "Published in associated repositories",
+            "Downloadable from project website",
+            "Available upon request",
+            "Packaged/included with the associated system",
+            "Other(s)"
+        ]},
+    "O5": 
+        {"question":"(Optional) Do you have anything else you would like to note regarding SBOMs and HBOMs for cyber-physical systems?", 
+        "type":"short-answer"}
+    },
+"demographics":{
+    "D1": 
+        {"question":"How many years of experience in software / hardware development do you have?",
+        "type":"single-text"},
+    "D2": 
+        {"question":"How would you describe your primary role in your organization(s)?",
+        "type":"single-text"},
+    "D3": 
+        {"question":"What is your highest level of education?",
+        "type":"single-select-with-other"},
+    "D4": 
+        {"question":"Which programming languages have you most used in past project(s)?.",
+        "type":"multi-select-with-other"},
+    "D5": 
+        {"question":"What types of systems have you most developed?", 
+        "type":"short-answer"},
+    "D6": 
+        {"question":"For which domains (e.g., banking or healthcare) have you developed applications / systems?",
+        "type":"short-answer"},
+    "D7": 
+        {"question":"Do you have a background in computer security? Formal (college classes, degree, certification) or informal (self-learning or other training)?",
+        "type":"single-select"},
+    "D8": 
+        {"question":"Do you have a background in software licensing? Formal (college classes, degree, certification) or informal (self-learning or other training)?",
+        "type":"single-select"},
+    "D9": 
+        {"question":"How often did you release or help release a new major version of an application / software over the past two years?",
+        "type":"single-select"},
+    "D10": 
+        {"question":"Which country / countries are you and / or your organization based in?", 
+        "type":"short-answer",
+        "contains_pii":true},
+    "D11": 
+        {"question":"Please enter your email address. This will be used to contact you for compensation. If we are interested in your responses, we may contact you for a follow-up interview, if you are willing.", 
+        "type":"email",
+        "contains_pii":true}
+    }
+}

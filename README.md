@@ -35,7 +35,22 @@ The `additional_content` folder contains supplementary and expanded resources th
 The `data_analysis` folder contains aggregated survey results and the code used to analyze these results.  The structure of the `data_analysis` directory is described below. 
 
 ## Data Analysis Tooling
-For an in-depth look at our tooling suite and data, please explore the `data_analysis` directory and see its associated README.
+
+**For detailed descriptions of all of our data analysis functionality, including instructions for adding and analyzing new surveys as well as exploring survey results with our Data Reader, please refer to the README within the `data_analysis` folder.**
+
+### Survey Results
+
+Within the `data_analysis` folder, the `surveys` folder contains directories for each of the five surveys we conducted:
+- `initial_survey`
+- `key_projects`
+- `machine_learning`
+- `cyber-physical`
+- `legal`
+
+Each parent folder has three nested folders:
+- `data`: contains folders with the csv data for responses
+- `figs`: contains figures plotting the collected data
+- `files`: contains the raw, sanitized JSON files and a file listing valid response IDs
 
 ## Survey Questions
 

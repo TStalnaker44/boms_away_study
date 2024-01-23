@@ -1,0 +1,24 @@
+ResponseID,Model structure / architecture,Runtime performance requirements,"Optimizers, loss functions, etc.",Environment in which the model was trained in,Unique model identifier,Model parameters,Model description,Presence of Personally Identifiable Information,Description of the training data,System dependencies,Description of the validation and testing data,Model license,Creation / building time,"'- Description of the intended (model) use
+- Model initialization techniques","Programming Language and libraries to use for implementation,
+Other users and their experiences if any available, and cost of running the model and the inference per image/input.","Specific model definitions - say I'm working in PyTorch and want to use someone else's pretrained weights. I should have access to the exact model definition used for the model. If someone is forced to reverse engineer the model, small details may be incorrect, leading to errors. For example, classification heads for image classifiers are usually either in the order of AvgPool2d -> norm -> fc or norm->AvgPool2d -> fc. Reversing the order has no impact on the loading of the model weights, but leads to differences in model performance.
+Validation procedures are also potentially in need of documentation, specifically the image preprocessing pipeline used during the validation phase of image classification models should be fully documented such that it is replicable from scratch. I know that cropping procedures, resizing interpolation algorithms, and other small and often-overlooked aspects of deep learning code can have effects on the results.",Known model/data defects,Data (pre-)processing techniques,Model hyperparameters,Others (please specify),Potential model biases,Data version,Model version,Potential fairness issues,The loss function is the most important. The loss function is also directly related to the data it was trained on. 
+R_snX1LGF2NUe2M6Z,1,1,1,1,,,1,1,1,1,1,1,1,,,1,1,1,1,1,1,1,1,1,
+R_2nSZ6Uk4gpCWUxP,,,1,,,,,,1,,1,,,,,,,1,,1,,,,,1
+R_3DbEw6tOraj96Gs,1,1,1,1,1,1,1,1,1,1,1,1,1,,,,1,1,1,,,1,1,,
+R_3kdkXujBLUZKhh0,,,1,1,,,,1,1,1,,1,,,,,,1,,,,1,,,
+R_3fqT2cEIFtvLSOn,1,,1,1,,,1,1,1,1,1,1,,,,,,1,1,,,1,1,1,
+R_3DvvLm2ClM35LuV,1,1,1,1,1,1,,,,1,1,,,,,,,,1,,1,1,1,1,
+R_2fQicKO6LMixLAR,,1,,1,,1,1,,1,1,1,1,,,,,,1,,,,,1,,
+R_2cAhImlk2Ck0mat,,,,,,,,,,,,,,,,,,,1,,1,,,,
+R_Wx2cn6RfYxDu3Dz,,1,,,,,1,,1,1,,1,1,,,,1,,,,1,1,1,,
+R_2Y5O7bIDKYRDgxj,1,,1,1,1,1,,,1,,1,,,,,,1,1,1,,,,,,
+R_1q8n5SpYhsIYMg4,,,,,,1,,,1,,,,,,,,1,,,,1,,,1,
+R_1mmIXtQKGgLWU7P,,,,,1,,,,1,1,,,1,,,,,,,,,,1,,
+R_55W4oRWHfxOQzT3,1,1,,1,1,,1,1,1,1,1,1,,,,,,1,,,1,1,,1,
+R_4NF31pzBLP32S6R,1,,1,,1,1,1,1,1,1,1,1,,,,,1,1,1,,,1,1,,
+R_pRGaZXs482rgAZX,1,,1,1,1,1,1,1,1,1,1,1,1,,,,,1,1,,,1,1,,
+R_1mnnusK22udQw8S,1,1,1,,1,1,1,,1,1,1,1,,,1,,,,1,1,1,1,1,,
+R_1n7Jt1YCHoTG4OD,,,,1,1,,,,1,,1,,,,,,,1,1,,,1,1,,
+R_Z9OwHebnJViKb05,1,,1,,,1,,,,1,,,,,,,,,,,,,,,
+R_1re29t5ffAzofYC,1,1,1,1,,1,1,1,1,1,1,1,,,,,1,1,1,,1,1,1,1,
+R_37tJ6C11CZ9OlfH,1,,1,,,,1,,1,1,1,,,1,,,,1,,1,,1,1,,

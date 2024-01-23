@@ -1,50 +1,52 @@
 
-from initial_survey.csv2json import convertCSV as initial_convertCSV
-from machine_learning.csv2json import convertCSV as ai_convertCSV
-from key_projects.csv2json import convertCSV as key_convertCSV
-from cyber_physical.csv2json import convertCSV as cyber_convertCSV
-from legal.csv2json import convertCSV as legal_convertCSV
-from partition import partition
-from sanitize import sanitize
-from json_converter import convert
-from plot import plot
+from scripts.csv2json import CSVConverter
+from scripts.sanitize import sanitize
+from scripts.json_converter import convert
+from scripts.partition import partition
+from scripts.plot import plot
+import os, settings
 
-FROM_SOURCE = False # Code to run if building from original csv files (not included with remote)
-PRE_PROCESS = False # pre-process the data before plotting
-PLOT = True # plot figures for all surveys
+for survey in settings.SURVEYS:
 
-all_surveys = ("initial_survey", "key_projects", "machine_learning", "cyber_physical", "legal")
+    survey_path = os.path.join("surveys", survey)
+    print("Processing %s survey..." % (survey,))
 
-if PRE_PROCESS:
-    if FROM_SOURCE:
+    if settings.PRE_PROCESS:
 
-        ## Generate JSON Files from CSV
-        initial_convertCSV()
-        ai_convertCSV()
-        key_convertCSV()
-        cyber_convertCSV()
-        legal_convertCSV()
+        if settings.FROM_SOURCE:
 
-        ## Sanitize JSON
-        print("Sanitizing files...")
-        for survey in all_surveys:
-            sanitize(survey)
+            # Generate JSON Files from CSV
+            CSVConverter(survey_path).convertCSV()
 
-    ## Convert JSON to CSV
-    print("Converting JSON to CSV...")
-    for survey in all_surveys:
-        convert(survey)
+            # Sanitize JSON
+            print("Sanitizing files...")
+            sanitize(survey_path)
 
-    ## Partition response coding
-    print("Partitioning Response Coding Files...")
-    for survey in ("initial_survey", "key_projects"):
-        partition(survey)
+        # Make the data directory if it doesn't exist
+        data_path = os.path.join(survey_path,"data")
+        if not os.path.isdir(data_path):
+            os.mkdir(data_path)
 
-if PLOT:
-    ## Plot the results
-    print("Plotting Results (this may take awhile)...")
-    for survey in all_surveys:
-        print(f"Plotting {survey} survey...")
-        plot(survey)
+        ## Convert JSON to CSV
+        print("Converting JSON to CSV...")
+        convert(survey_path)
 
-print("All Data Processed!")
+        if settings.RESPONSE_CODING_DONE:
+            ## Partition response coding
+            print("Partitioning Response Coding Files...")
+            partition(survey_path)
+
+    if settings.PLOT:
+
+        # Make the figs directory if it doesn't exist
+        fig_path = os.path.join(survey_path,"figs")
+        if not os.path.isdir(fig_path):
+            os.mkdir(fig_path)
+
+        ## Plot the results
+        print("Plotting Results (this may take awhile)...")
+        for ft in settings.FILE_TYPES:
+            print(f"Plotting {survey} survey as {ft}...")
+            plot(survey_path, ft)
+
+print("All data processed!")
