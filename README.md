@@ -22,7 +22,7 @@ In order to run the data cleaning and analysis tools, the following libraries wi
 
 The `survey_questions` folder contains the questions we asked in the various surveys administered.
 
-The `codes.json` file lists and defines the codes assigned to the responses to open-ended questions.
+The `codes.json` file lists and defines the codes assigned to the responses to open-ended questions. 
 
 The `keywords.json` file provides a list of the keywords used during participant mining for applicable populations.
 
@@ -36,6 +36,36 @@ The `data_analysis` folder contains aggregated survey results and the code used 
 
 ## Data Analysis Tooling
 For an in-depth look at our tooling suite and data, please explore the `data_analysis` directory and see its associated README.
+
+## JSON Structure
+
+To categorize responses to open-ended survey questions, we utilized an *open-coding* approach, in which we defined categories for responses for each question. `codes.json` lists those codes and their definitions for each question, sorted by question "blocks" as defined by the structure of our survey. The structure of `codes.json` is as follows:
+
+```
+{
+    "Question_Block_Name": {
+            "Question1": {
+                "Question1Code1": "Code definition...",
+                "Question1Code2": "Code definition...",
+                ...
+            }
+            "Question2:" {
+                "Question2Code1": "Code definition...",
+                ...
+            }
+        }
+    ...
+}
+```
+
+Part of our approach to gathering participants included mining of publicly-available user data on GitHub using GitHub's API. Specifically, we used this strategy for two surveys, the "SBOM C&A" survey and the "ML" survey. To identify relevant participants, we utilized certain keywords in this search, detailed in `keywords.json`. The structure of this file is as follows:
+
+```
+{
+    "Survey 1 Name": ["search keyword 1", "search keyword 2", ...],
+    "Survey 2 Name: ["search keyword 1", ...]
+}
+```
 
 ## Survey Questions
 
