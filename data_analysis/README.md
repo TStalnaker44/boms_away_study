@@ -202,7 +202,7 @@ You will need to type the name of a survey to get started.  Further information 
 
 The `run_all.py` file calls all relevant scripts for data analysis, including cleaning, converting, and plotting data. The scripts it relies on are held in the `scripts` directory:
 
-- The `plot.py` file can be run to generate plots for a given survey (this doesn't work with the roles functionality yet).
+- The `plot.py` file can be run to generate plots for a given survey.
 
 - The `sanitize.py` file is run to clean the produced JSON and remove any PII before pushing to GitHub.
 
