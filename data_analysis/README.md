@@ -33,11 +33,11 @@ When the provided CSV file is converted into a more readable JSON, the tool also
 The survey infrastructure package is designed to work out of the box as much as possible, but does require some manual set-up.  A few files are required before the program can run successfully.  We now explore each required file.
 
 #### questions.json 
-Should be placed at the top-level of your survey folder.  This file is used to specify the survey sections, question ids, question text, question types, and other relevant information.  The structure you provide will also inform how your data JSON files will be created. Within the Qualtrics system, navigate to the "Survey" tab of your survey and click on "Tools" > "Import/Export" > "Export Survey" to download a *.qsf file of your survey's structure. Place this file within your survey's `files` directory. From your survey directory, run `scripts/qualtrics_reader.py` to generate the `questions.json` file for your survey. Details of the structure of this file are included below.
+Should be placed at the top-level of your survey folder.  This file is used to specify the survey sections, question ids, question text, question types, and other relevant information.  The structure you provide will also inform how your data JSON files will be created. Within the Qualtrics system, navigate to the "Survey" tab of your survey and click on `"Tools" > "Import/Export" > "Export Survey"` to download a `*.qsf` file of your survey's structure. Place this file within your survey's `files` directory. Now run the `createQuestionsJson.py` script to generate the `questions.json` file for your survey.  You will need to set the `SURVEYS` and `OVERWRITE` parameters for your usecase. The generated file will contain the basic structure of the questions in your survey, but it may need to be amended based on additional context. **Important: questions eliciting Personally Identifiable Information (PII) which needs to be sanitized from the output must be marked with the `contains_pii` field.** Full details of the structure of this file are included below.
 
-You should not include an initial question asking for user consent in your `questions.json`.
+You should not include an initial question asking for user consent in your `questions.json`
 
-The names assigned to questions should be distinct, even across groups.  Assigned names do not have to match those you assigned in Qualtrics, but it is good practice to keep them synced.
+The names assigned to questions should be distinct, even across groups.  Assigned names do not have to match those you assigned in Qualtrics, but it is good practice to keep them synced when possible.
 
 An example has been provided below.
 
@@ -67,6 +67,7 @@ Additional Fields:
 - `identifier`
     - Denotes that a question allows participants to self-identify.
     - Used to automatically segment data for analysis across roles.
+    - You can only have one question marked as an `identifier`.
     - Values: boolean
     - Optional field
 - `roles`
@@ -74,6 +75,7 @@ Additional Fields:
     - Values: dictionary of key/value pairs
     - Format: "\<abbreviated form>":"\<selection as appears in survey>"
     - Required when `identifier` tag has been used.
+    - Terms provided as keys in the `roles` dictionary can have underscores, but not dashes
 
 Example:
 ```
@@ -137,6 +139,8 @@ For survey questions that ellicit longer responses, you will likely want to empl
 You can run the tool without including `response_coding.csv`, but ensure that you set `RESPONSE_CODING_DONE` to `False` in `config.py`.
 
 Note: Additional tooling is available to facilitate the coding process and the creation of the `response_coding.csv`.
+
+The question IDs used in the `response_coding.csv` file must match those found in the `questions.json`, otherwise the mapping will fail.
 
 ## Generated Files
 ### Data Files
